@@ -3,15 +3,9 @@ project(OOP_Lab4)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(main 
-    main.cpp 
-    point.h 
-    figure.h 
-    trapezoid.h 
-    rhombus.h 
-    pentagon.h 
-    array.h
-)
+include_directories(include)
+
+add_executable(main main.cpp)
 
 find_package(GTest REQUIRED)
 add_executable(tests tests.cpp)
